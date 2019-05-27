@@ -12,6 +12,11 @@ from alertaclient.api import Client
 
 __version__ = '3.5.0'
 
+# python 3 supported
+if sys.version_info[0] >= 3:
+    unicode = str
+
+    
 SYSLOG_TCP_PORT = int(os.environ.get('SYSLOG_TCP_PORT', 514))
 SYSLOG_UDP_PORT = int(os.environ.get('SYSLOG_UDP_PORT', 514))
 
